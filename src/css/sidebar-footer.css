@@ -1,0 +1,251 @@
+body{
+    background-color: #000;
+    /* Utilizando a variável declarada anteriormente como fonte */
+    font-family: var(--font-dm-sans);
+}
+
+.sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    padding: 12px;
+    width: 300px;
+    height: auto;
+    
+}
+.sidebar_navegation{
+    background-color: #121212;
+    border-radius: 8px;
+    padding: 16px 0 0 16px;
+    /* ordem dos trens: 
+            cima, direita, embaixo, esquerda 
+    sentido de relógio*/
+}
+
+.sidebar_navegation .logo{
+    background-color: #121212;
+    display: flex;
+    border-radius: 8px;
+    padding: 16px 0 0 16px;
+
+}
+
+/* é como se avissasemos que vamos mexer somente com a imagem que está dentro do logo  */
+.logo img{
+    width: 80px;
+}
+
+.sidebar nav ul{
+    margin-top: 20px;
+    padding: 0 20px 10px 20px;
+}
+
+.sidebar ul li{
+    padding: 10px 0;
+    /* O primeiro é embaixo e encima e o segundo é direita e esquerda */
+}
+
+.sidebar nav ul li a{
+    color: #b3b3b3;
+    text-decoration: none;
+    /* Refere-se a expressura da fonte */
+    font-weight: 600;
+    font-size: 14px;
+}
+.library{
+    background-color: #121212;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 4px 8px;
+    color: #b3b3b3;
+    font-weight: 600px;
+    font-size: 14px;
+    margin-top: 10px;
+}
+.library .library__content{
+    display: flex;
+    justify-content: space-between;
+}
+
+.library .library__button{
+    display: flex;
+    margin-right: 10px;
+    color: #b3b3b3;
+    /* fundo do botão transparente */
+    background-color: transparent;
+    /* Tira a borda do botão */
+    border: 0px;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    /* tira qualquer trasejado o marca de hyperlink */
+    text-decoration: none;
+    text-transform: none;
+    padding: 20px 10px;
+
+}
+
+.library .library__button .fa{
+    font-size: 20px;
+    margin-right: 10px;
+    font-weight: 300;
+    padding-right: 8px;
+}
+
+.library .library__content .fa-plus{
+    margin: 24px 10px;
+}
+
+.section-playlist{
+    display: flex;
+    /* Lembre-se que o align itens trabalha junto com o display flex */
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+    background-color: #242424;
+    color: #b3b3b3;
+    font-weight: 600;
+    font-size: 14px;
+    margin: 8px 0px;
+    padding: 16px 20px;
+    border-radius: 10px;
+}
+
+.section-playlist .section-playlist__content{
+    display: flex;
+    flex-direction: column;
+}
+
+.section-playlist__content .text{
+    padding-bottom: 14px;
+    color: #fff;
+}
+
+.section-playlist__content .title{
+    font-weight: 700;
+}
+.section-playlist__content .subtitle{
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.section-playlist__content .section-playlist__button{
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+    color: #000; 
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: none;
+    padding: 10px;
+    margin-top: 12px;
+    border: 0px;
+    width: 113px;
+
+}
+
+.sidebar .cookies{
+    margin: 25px 20px;
+}
+.sidebar .cookies a{
+    color: #b3b3b3;
+    font-weight: 500;
+    font-size: 10px;
+    text-decoration: none;
+    text-transform: none;
+}
+/* A propriedade hover do CSS é uma pseudo-classe que permite aplicar estilos a um elemento quando o mouse passa sobre ele. Isso é útil para criar interações visuais que melhoram a experiência do usuário, indicando que um elemento é interativo ou que pode ser clicado. */
+.sidebar .cookies a:hover{
+    text-decoration: underline;
+}
+
+.languages .languages__button{
+    background-color: transparent;
+    border: 1px solid #878787;
+    color: #fff;
+    cursor: pointer;
+    /* só recomendável utilizar o align itens sem o display flex em situações como está em que só um elemento dentro da div, coso contrário o display flex deveria ser incluído */
+    align-items: center;
+    font-weight: bold;
+    width: 170px;
+    margin: 8px;
+    padding: 8px;
+    border-radius: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Desafio Footer */
+footer{
+    display: flex;
+    justify-content: space-between;
+    /* OBSERVE COMO SE COLOCA GRADIENTE */
+    background: linear-gradient(90deg, rgb(180, 47, 147), rgb(72, 133, 237));
+    position: fixed;
+    /* o bottom o coloca na parte debaixo da tela */
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    
+}
+footer .footer__content{
+    display: flex;
+    flex-direction: column;
+    height: 80px;
+    padding-right: 65px;
+}
+footer .footer__content span{
+    display: flex;
+    margin-top: 10px;
+}
+footer .footer__content .text{
+    padding-bottom: 14px;
+    color: #fff;
+    text-align: left;
+    margin-left: 20px;
+    font-weight: 600;
+}
+
+footer .btn__footer{
+    background-color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    border: 0px;
+    color: #000;
+    border-radius: 100px;
+    cursor: pointer;
+    margin-right: 50px;
+    width: 20%;
+    height: auto;    
+}
+
+
+
+
+
+/* Desafio aula 1
+.library .sidebar_navegation{
+    margin: 50px 0 0 0;
+    height: 300px;
+}
+
+.library .sidebar_navegation ul{
+    display: flex;
+    justify-content: space-between;
+}
+ */
+
+ 
